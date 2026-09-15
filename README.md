@@ -5,6 +5,8 @@ The repository contains a gallery of images which display the installation of th
 Phishing is a cyber attack that uses social engineering tactics to gain access to a victim's sensitive information. Attackers use email, phone calls, or text messages disguised as a legitimate entity to extract information from victims through blackmail. Social engineering refers to human errors in technology design. In other words, it's a scam in the modern era. When attackers can't penetrate systems, they focus on getting sensitive information from key people and disguising themselves as a legitimate entity to gain access.
 Evilginx is a man-in-the-middle cyber attack framework used to extract a victim's login information along with website cookie sessions, allowing the attacker to bypass two-factor authentication protection. The tool uses a customized version of the HTTP nginx server that provides man-in-the-middle functionality and acts as a proxy server between the browser and the target website. The final version is entirely written in Golang as an application, implementing its own HTTP and DNS server, with an easy initial setup and configuration. This program can be used for malicious purposes, but it was created for demonstrations and experiments that contribute to the improvement of computer system security.
 
+<img width="1451" height="374" alt="Terminal3" src="https://github.com/user-attachments/assets/aaf29e00-aca1-4a9d-b559-600cfcba1a28" />
+
 Evilginx Installation:
 - Cloning Evilginx 2 repository into local machine
 - Creating Evilginx 2 software executable by running the Batch script

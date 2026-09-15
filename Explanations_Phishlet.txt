@@ -1,0 +1,7 @@
+proxy_hosts:
+Section that defines how the proxy web page will be displayed, where the victim will enter and input their login information. 
+phish_sub is the subdomain name as it will appear in the victim's browser, orig_sub is the real subdomain name, domain is the real domain composed of the subdomain name and its extension, session tells the Evilginx software that the phishing page will contain session information, meaning cookies, which need to be extracted, is_landing indicates that the victim will initially land on this phishing web page, and auto_filters activates the section with the filter list. 
+sub_filters:
+sub_filters Section that defines the rules for rewriting the web content returned through a proxy so that the proxy page remains usable while routing through the proxy.
+In an experiment, the user's browser sends page requests through the set proxy host. The proxy contains content configured by the sub_filters list, so links point to the proxy site, not the real site, keeping the page functional on the victim's browser. The info in search/replace will replace the info from orig_sub/domain. 'Orig_sub/domain' contains the real website, while 'search/replace' contains the domain names of the phishing website. This filtering only applies to response types in the format specified in 'mimes'. auth_tokens:
+Section that defines the names and domains of cookies and session info extracted by the software, the phishlet handles them and saves them as material and resources for authentication or session.

